@@ -50,7 +50,7 @@ latEll = Dict.fromList [ ("a" , "\u{03b1}")
                         ,("è" , "\u{0300}") -- grave --
                         ,("â" , "\u{0311}") -- circonflexe --
                         ,("ç" , "\u{0328}") -- iota souscrit --
-                        ,("q" , "\u{1F01}") -- a esprit rude --
+                        ,("q" , "\u{0313}") -- esprit doux --
                         , ("_" , "") -- filter _
                         ] 
 latEll_= Dict.fromList [ ("t" , "\u{03b8}") -- theta --  

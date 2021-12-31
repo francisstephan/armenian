@@ -8,8 +8,10 @@ The application is written with Elm, which allows for:
 - easy communication with javascript
 - simple, consistent and efficient tools
 
-# Greek breathing, accents and iota subscript
+# Greek breathings, accents and iota subscript
 Special characters are used for rough breathing (rho and vowels)
+
+Smooth breathing is obtained by adding the character q ==after== the vowel.
 
 Accents are obtained by adding one character to the vowel: 
 - é for acute
@@ -19,5 +21,5 @@ Accents are obtained by adding one character to the vowel:
 # Acknowledgement
 I got the reference to Logeion (which allows for consultation of the major classical dictionaries: LSJ, Pape, Bailly and others) from Lexilogos (https://www.lexilogos.com/english/greek_ancient_dictionary.htm)
 
-#Licence
+# Licence
 MIT
