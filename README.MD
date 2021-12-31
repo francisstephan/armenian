@@ -9,10 +9,15 @@ The application is written with Elm, which allows for:
 - simple, consistent and efficient tools
 
 # Greek breathing, accents and iota subscript
-Special characters are used for breathing (rho and vowels)
+Special characters are used for rough breathing (rho and vowels)
+
 Accents are obtained by adding one character to the vowel: 
-  é for acute
-  è for grave
-  â for circumflex
+- é for acute
+- è for grave
+- â for circumflex
 
+# Acknowledgement
+I got the reference to Logeion (which allows for consultation of the major classical dictionaries: LSJ, Pape, Bailly and others) from Lexilogos (https://www.lexilogos.com/english/greek_ancient_dictionary.htm)
 
+#Licence
+MIT
