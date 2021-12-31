@@ -14,9 +14,11 @@ Special characters are used for rough breathing (rho and vowels)
 Smooth breathing is obtained by adding the character q ==after== the vowel.
 
 Accents are obtained by adding one character to the vowel: 
-- é for acute
-- è for grave
-- â for circumflex
+- é for acute : aé ==> ά
+- è for grave : uè ==> ὺ
+- â for circumflex : ôâ ==> ω̑
+
+iota subscript is obtained by adding the character ç after the vowel. Example : aç ==> α̨
 
 # Acknowledgement
 I got the reference to Logeion (which allows for consultation of the major classical dictionaries: LSJ, Pape, Bailly and others) from Lexilogos (https://www.lexilogos.com/english/greek_ancient_dictionary.htm)

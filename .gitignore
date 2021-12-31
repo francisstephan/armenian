@@ -1,2 +1,4 @@
 out/
 elm-stuff/
+/index.html
+pub/app.js
