@@ -18,7 +18,7 @@ Smooth breathing is obtained by adding the character q ==after== the vowel.
 Accents are obtained by adding one character to the vowel: 
 - é for acute : aé ==> ά
 - è for grave : uè ==> ὺ
-- â for circumflex : ôâ ==> &#1FF6;
+- â for circumflex : ôâ ==> ῶ
 
 iota subscript is obtained by adding the character ç after the vowel. Example : aç ==> α̨
 
