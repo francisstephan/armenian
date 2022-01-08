@@ -14,11 +14,11 @@ The application is written with Elm, which allows for:
 
 We use 6 diacritics: breathings c and q, accents è, é and â and iota subscript ç.
 
-The diacritics may me entered in any order.
+The diacritics may be entered in any order.
 
 For capital letters (A, E, ...) only breathings apply, accents are not supported
 
-Rough breathing is obtained by adding the character c after the vowel
+Rough breathing is obtained by adding the character c after the vowel (and the letter r)
 
 Smooth breathing is obtained by adding the character q after the vowel.
 
@@ -37,7 +37,7 @@ Any character not recognized is rendered unmodified.
 This extends to the improper use of diacritics:
 - diacritics not following a vowel
 - after r, diacritic other than c
-- simultaneous use of non compatible diacritics: exemple: acq ==> acq (not ἁq), aéè ==> aéè (not άè)
+- simultaneous use of non compatible diacritics: example: acq ==> acq (not ἁq), aéè ==> aéè (not άè)
 - illegal circumflex over ε and o
 - illegal iota subscript with ε, ι, ο, υ
 
