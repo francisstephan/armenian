@@ -16,6 +16,8 @@ We use 6 diacritics: breathings c and q, accents è, é and â and iota subscrip
 
 The diacritics may me entered in any order.
 
+For capital letters (A, E, ...) only breathings apply, accents are not supported
+
 Rough breathing is obtained by adding the character c after the vowel
 
 Smooth breathing is obtained by adding the character q after the vowel.
@@ -25,7 +27,7 @@ Accents are obtained by adding one character after the vowel:
 - è for grave : uè ==> ὺ
 - â for circumflex : ôâ ==> ῶ
 
-iota subscript is obtained by adding the character ç after the vowel. Example : aç ==> α̨
+iota subscript is obtained by adding the character ç after the vowel. Example : aç ==> ᾳ
 
 The program uses the Unicode Greek extended table, so the characters get rendered without problem in MS Word
 
@@ -34,8 +36,10 @@ The program uses the Unicode Greek extended table, so the characters get rendere
 Any character not recognized is rendered unmodified.
 This extends to the improper use of diacritics:
 - diacritics not following a vowel
-- diacritic other than c after r
+- after r, diacritic other than c
 - simultaneous use of non compatible diacritics: exemple: acq ==> acq (not ἁq), aéè ==> aéè (not άè)
+- illegal circumflex over ε and o
+- illegal iota subscript with ε, ι, ο, υ
 
 # Acknowledgement
 I got the reference to Logeion (which allows for consultation of the major classical dictionaries: LSJ, Pape, Bailly and others, https://logeion.uchicago.edu/about ) from Lexilogos (https://www.lexilogos.com/english/greek_ancient_dictionary.htm)
