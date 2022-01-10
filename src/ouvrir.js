@@ -5,4 +5,3 @@ openDic = function (id){
   var chaine="https://logeion.uchicago.edu/"+text
   window.open(chaine);
 }
-

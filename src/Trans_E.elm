@@ -1,9 +1,6 @@
 module Trans_E exposing (transl)
 
 import Dict
-import Array
-import Array exposing (empty)
-import Html exposing (s)
 
 latEll = Dict.fromList [ ("a" , "\u{03b1}")  
                         ,("b" , "\u{03b2}")
@@ -85,14 +82,9 @@ latEll = Dict.fromList [ ("a" , "\u{03b1}")
                         ,("ôç" , "\u{1FF3}"), ("ôcâç","\u{1FA7}"), ("ôcçè","\u{1FA3}"), ("ôcçé","\u{1FA5}")
                         ,("ôè" , "\u{1F7C}"), ("ôqâç","\u{1FA6}"), ("ôqçè","\u{1FA2}"), ("ôqçé","\u{1FA4}")
                         ,("ôé" , "\u{1F7D}")
-                        ,("é" , "\u{0301}") -- aigü --
-                        ,("è" , "\u{0300}") -- grave --
-                        ,("â" , "\u{0311}") -- circonflexe --
-                        ,("ç" , "\u{0328}") -- iota souscrit --
-                        
                         , ("_" , "") -- filter _
                         ] 
-latEll_= Dict.fromList [ ("t" , "\u{03b8}") -- theta --  
+latEll_= Dict.fromList  [ ("t" , "\u{03b8}") -- theta --  
                         , ("s" , "\u{03c2}") -- sigma final --  
                         , ("p" , "\u{03c8}") -- psi --
                         , ("T" , "\u{0398}") -- Theta --
@@ -102,23 +94,22 @@ latEll_= Dict.fromList [ ("t" , "\u{03b8}") -- theta --
 diacritics : List String
 diacritics = ["c", "q", "â", "ç", "è", "é"]
 
-subst : String -> (Dict.Dict String String) -> String
+subst : String -> (Dict.Dict String String) -> String -- substitute one char (or char + diacritics) on the basis of dictionary
 subst car dict =
-  Maybe.withDefault car (Dict.get car dict)
+  Maybe.withDefault car (Dict.get car dict) -- if car is in dict, substitute, else keep car
 
-subst_ : (String,String) -> String
+subst_ : (String,String) -> String -- select dictionary on the basis of previous char : _ or not _, and substitute char
 subst_ dble =
   let
      (carac, sub) = dble
   in
     if sub == "_" then subst carac latEll_ else subst carac latEll
 
-szip : List String -> List (String,String)
+szip : List String -> List (String,String) -- zip s with a right shift of itself
 szip s =
-  
     List.map2 Tuple.pair s ("&" :: s)
 
-foldp: List String -> List String -> List String
+foldp : List String -> List String -> List String -- concatenate letters with their diacritics, if any
 foldp acc list =
   case list of
     [] ->
@@ -147,29 +138,24 @@ foldp acc list =
           else
             foldp (x::acc) xs
 
-trich : String -> String
+trich : String -> String -- sort diacritics, if more than 1 present
 trich s =
-  if String.length s < 3 then s
+  if String.length s < 3 then s -- 0 or 1 diacritic, no need to sort
   else
     let 
-      h = String.slice 0 1 s
-      b = String.slice 1 5 s
+      h = String.slice 0 1 s -- head character, should be vowel or r
+      b = String.slice 1 5 s -- b contains the diacritics, which will be sorted according to Unicode value
     in
       h ++ (b |> String.toList |> List.map String.fromChar |> List.sort |> List.foldr (++) "")
 
 transl : String -> String
-{- transl chaine =
-  szip chaine
-   |> List.map subst_
-   |> List.foldr (++) "" -}
 transl chaine =
-  let 
-    list = chaine |> String.toList |> List.map String.fromChar
-  in
-    (foldp [] list)
+    chaine
+    |> String.toList
+    |> List.map String.fromChar
+    |> foldp [] 
     |> List.reverse 
     |> List.map trich
     |> szip
     |> List.map subst_
     |> List.foldr (++) ""
-    
