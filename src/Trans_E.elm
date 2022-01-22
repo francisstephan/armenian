@@ -117,9 +117,10 @@ foldp acc list =
     x::xs ->
       case xs of
         [] -> 
-          x::acc
+          if x == "s" then "ς"::acc else x::acc
         y::ys ->
-          if List.member y diacritics then -- 1 diacritic
+          if y == " " && x == "s" then foldp ("ς"::acc) xs
+          else if List.member y diacritics then -- 1 diacritic
             case ys of
               [] ->
                 (x++y)::acc
