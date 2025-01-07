@@ -1,2 +1,2 @@
 #!/bin/zsh
-elm make src/Ellenikon.elm  --output out/elm.js
+elm make src/Hayeren.elm  --output out/elm.js

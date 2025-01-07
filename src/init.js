@@ -1,5 +1,5 @@
 function start(){
-  var app = Elm.Ellenikon.init({
+  var app = Elm.Hayeren.init({
     node: document.getElementById('main')
   });
   app.ports.copyToClip.subscribe(function(data) {

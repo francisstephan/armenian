@@ -1,10 +1,10 @@
-port module Ellenikon exposing (main)
+port module Hayeren exposing (main)
 
 import Browser
 import Html exposing (Html, div, input, text, button, br, span)
 import Html.Attributes exposing (..)
 import Html.Events exposing (onInput, onClick)
-import Trans_E
+import Trans_Ha
 
 -- MAIN
 main =
@@ -56,9 +56,9 @@ view model =
     [ span [style "font-weight" "bold"] [ text "Type on latin (french) keyboard :"]
     , button [ class "rebut", onClick Reset ] [ text "Reset" ]
     , button [ class "rebut", onClick CopyToClipboard ] [ text "Copy to clipboard" ]
-    , button [ class "rebut", onClick OpenDic ] [ text "Lookup in ΛΟΓΕΙΟΝ" ]
+    , button [ class "rebut", onClick OpenDic ] [ text "Lookup in Wiktionary" ]
     , br [] []
     , input [ autofocus True, size 120, placeholder "Latin caracters", value model.content, onInput Change, id "entree" ] []
-    , div [style "font-weight" "bold", style "margin-top" "12px"] [ text "Get greek text :"]
-    , div [ id "convert", dir "ltr"] [ text (Trans_E.transl model.content) ]
+    , div [style "font-weight" "bold", style "margin-top" "12px"] [ text "Get armenian text :"]
+    , div [ id "convert", dir "ltr"] [ text (Trans_Ha.transl model.content) ]
     ]
