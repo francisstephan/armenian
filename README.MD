@@ -14,7 +14,8 @@ The application is written with Elm, which allows for:
 
 # Rationale
 
-Many Armenian consonants appear in 3 voicings: voiced, unvoiced unaspirated, unvoiced aspirated.
+Our keyboard was developed based on Eastern Armenian sounds - however Western and Eastern Armenian share the same alphabet.
+Many Eastern Armenian consonants appear in 3 voicings: voiced, unvoiced unaspirated, unvoiced aspirated.
 Here is how we chose to transcribe them:
 
 |       Voiced       | Unvoiced unaspirated | Unvoiced aspirated |
