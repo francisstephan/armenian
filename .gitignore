@@ -5,3 +5,5 @@ pub/app.js
 /polytonic.odt
 *.back
 /memoFS
+*.xlsx
+*.docx

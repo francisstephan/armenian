@@ -15,7 +15,9 @@ The application is written with Elm, which allows for:
 # Rationale
 
 Our keyboard was developed based on Eastern Armenian sounds - however Western and Eastern Armenian share the same alphabet.
+
 Many Eastern Armenian consonants appear in 3 voicings: voiced, unvoiced unaspirated, unvoiced aspirated.
+
 Here is how we chose to transcribe them:
 
 |       Voiced       | Unvoiced unaspirated | Unvoiced aspirated |
@@ -31,6 +33,10 @@ We also use the ' sign (single quotation mark) for the letters ղ (g'), շ (s') 
 For the digraph ու, just type u, and for the ligature և (yev), type _v.
 
 Users not having ç on their keyboard may use _c instead.
+
+Characters in our keyboard are listed according to Armenian alphabetical order:
+
+![Armenian alphabet](aybuben.png "Armenien aybuben")
 
 # Unrecognized characters
 
