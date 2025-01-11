@@ -135,9 +135,43 @@ trich s =
     in
       h ++ (b |> String.toList |> List.map String.fromChar |> List.sort |> List.foldr (++) "")
 
+substhead : String -> String -- for each word, eliminate y in yé, v in vo
+substhead s =
+  let
+    l = String.toList s
+  in
+    String.replace "év" "_v"
+    (String.fromList 
+    (case l of
+      'y'::xs ->
+        case xs of
+          [] -> l
+          'é'::ys -> 'é'::ys
+          other -> l
+            
+      'Y'::xs ->
+        case xs of
+          [] ->
+            l
+          'é'::ys ->
+            'É'::ys
+          other ->
+            l
+      otherwise -> l
+    ) )    
+          
+
+changehead : String -> String -- apply substhead to each word
+changehead s =
+  s
+  |> String.split " "
+  |> List.map substhead
+  |> String.join " "
+
 transl : String -> String
 transl chaine =
     chaine
+    |> changehead
     |> String.toList
     |> List.map String.fromChar
     |> foldp [] 

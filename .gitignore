@@ -7,3 +7,4 @@ pub/app.js
 /memoFS
 *.xlsx
 *.docx
+*.pdf

@@ -30,7 +30,7 @@ Here is how we chose to transcribe them:
 
 We also use the ' sign (single quotation mark) for the letters ղ (g'), շ (s') and ռ (r').
 
-For the digraph ու, just type u, and for the ligature և (yev), type _v.
+For the digraph ու, just type u, and for the ligature և (yev), type év (yév at beginning of word).
 
 Users not having ç on their keyboard may use _c instead.
 
